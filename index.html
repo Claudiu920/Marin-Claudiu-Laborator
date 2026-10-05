@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+</head>
+<body>
+
+    <!-- 1. Header-ul cu numele site-ului și meniul de navigare internă -->
+    <header>
+        <h1>City Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="#destinatii">Destinații</a></li>
+                <li><a href="#planifica">Planifică</a></li>
+                <li><a href="#recomandari">Recomandări</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. Secțiunea Destinații -->
+        <section id="destinatii">
+            <h2>Destinații</h2>
+            
+            <article>
+                <h3>Lisabona, Portugalia</h3>
+                <p>Un oraș vibrant, cunoscut pentru tramvaiele galbene pitorești și muzica tradițională Fado.</p>
+                <p><strong>Durata recomandată:</strong> 4 zile</p>
+            </article>
+
+            <article class="featured">
+                <h3>Paris, Franța</h3>
+                <p>Orașul iubirii și al luminilor, faimos pentru Turnul Eiffel, Muzeul Luvru și croissantele delicioase.</p>
+                <p><strong>Durata recomandată:</strong> 5 zile</p>
+            </article>
+
+            <article>
+                <h3>Roma, Italia</h3>
+                <p>Un veritabil muzeu în aer liber, unde poți explora ruinele Colosseumului și Vaticanul.</p>
+                <p><strong>Durata recomandată:</strong> 4 zile</p>
+            </article>
+
+            <article>
+                <h3>Barcelona, Spania</h3>
+                <p>Un centru cultural renumit pentru capodoperele arhitecturale ale lui Gaudi și plajele mediteraneene.</p>
+                <p><strong>Durata recomandată:</strong> 5 zile</p>
+            </article>
+
+            <article>
+                <h3>Londra, Marea Britanie</h3>
+                <p>O metropolă cosmopolită plină de istorie, cu atracții precum Big Ben și British Museum.</p>
+                <p><strong>Durata recomandată:</strong> 6 zile</p>
+            </article>
+        </section>
+
+        <!-- 3. Secțiunea Planifică (Formularul) -->
+        <section id="planifica">
+            <h2>Planifică excursia</h2>
+            <form action="#" method="GET">
+                <div>
+                    <label for="name">Nume</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <br>
+                <div>
+                    <label for="destination">Destinație</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Alege...</option>
+                        <option value="Lisabona">Lisabona</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Roma">Roma</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Londra">Londra</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="days">Număr de zile</label>
+                    <input id="days" name="days" type="number" min="1" required>
+                </div>
+                <br>
+                <button type="submit">Planifică excursia</button>
+            </form>
+        </section>
+
+        <!-- 4. Secțiunea Recomandări -->
+        <section id="recomandari">
+            <h2>Recomandări de călătorie</h2>
+            <ul>
+                <li>Cumpără biletele pentru atracțiile principale (ex: Colosseum, Sagrada Familia) cu mult timp înainte, online, pentru a evita cozile.</li>
+                <li>Folosește transportul public local sau mergi pe jos pentru a descoperi străduțele ascunse și autentice.</li>
+                <li>Împachetează întotdeauna încălțăminte foarte comodă; city break-urile prespun zeci de mii de pași pe zi.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 5. Footer-ul -->
+    <footer>
+        <p>&copy; 2026 Marin Claudiu</p>
+    </footer>
+
+</body>
+</html>
