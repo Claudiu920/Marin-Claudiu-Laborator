@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { destinatii as destinatiiInitiale } from './data/destinatii.js'
-import { getNevizitate, totalZile, marcheazaVizitat, adaugaDestinatie } from './utils/destinatii.js'
+// 1. Aici am adăugat stergeDestinatie la importul din utils:
+import { getNevizitate, totalZile, marcheazaVizitat, adaugaDestinatie, stergeDestinatie } from './utils/destinatii.js'
 
 import Rezumat from './components/Rezumat.jsx'
 import AdaugareDestinatie from './components/AdaugareDestinatie.jsx'
@@ -19,9 +20,13 @@ export default function App() {
     setDestinatii((curent) => marcheazaVizitat(curent, id));
   }
 
-  // Funcția care se apelează când formularul trimite o destinație nouă
   function handleAdd(nouaDestinatie) {
     setDestinatii((curent) => adaugaDestinatie(curent, nouaDestinatie));
+  }
+
+  // 2. Aici am adăugat funcția nouă, chiar înainte de return:
+  function handleDelete(id) {
+    setDestinatii((curent) => stergeDestinatie(curent, id));
   }
 
   return (
@@ -33,12 +38,13 @@ export default function App() {
         zile={zileNevizitate} 
       />
       
-      {/* Folosim noul nume al componentei */}
       <AdaugareDestinatie onAdd={handleAdd} />
       
       <ListaDestinatii 
         destinatii={destinatii} 
         onToggle={handleToggle} 
+        // 3. Aici transmitem comanda către listă:
+        onDelete={handleDelete} 
       />
     </main>
   )
